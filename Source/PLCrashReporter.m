@@ -931,7 +931,7 @@ cleanup:
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
         basePath = [paths objectAtIndex: 0];
     }
-    _crashReportDirectory = [[basePath stringByAppendingPathComponent: PLCRASH_CACHE_DIR] stringByAppendingPathComponent: appIdPath];
+    _crashReportDirectory = basePath;
     return self;
 }
 
